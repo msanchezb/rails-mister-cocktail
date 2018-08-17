@@ -1,17 +1,19 @@
 
+<div class="wrapper image-1" id="back-image"></div>
+<div class="content">
+  <%= render 'banner' %>
 
-<%= render 'banner' %>
-
-<div class="card-container">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <%= render 'card', cocktail: cocktail %>
-      </div>
-      <% end %>
+  <div class="card-container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <%= render 'card', cocktail: cocktail %>
+        </div>
+        <% end %>
+    </div>
   </div>
-</div>
 
-<div class="text-center">
-  <%= link_to "New Cocktail", new_cocktail_path, class: "new-btn  btn btn-primary" %>
+  <div class="text-center">
+    <%= link_to "New Cocktail", new_cocktail_path, class: "new-btn  btn btn-primary" %>
+  </div>
 </div>
