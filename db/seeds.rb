@@ -30,8 +30,11 @@ require 'open-uri'
     end
   end
   ingredients.each_with_index do |ingredient, index|
-    ing = Ingredient.create(name: ingredient.downcase)
-    ing = Ingredient.find_by(name: ingredient.downcase) unless ing
+    if Ingredient.find_by(name: ingredient.downcase)
+      ing = Ingredient.find_by(name: ingredient.downcase)
+    else
+      ing = Ingredient.create(name: ingredient.downcase)
+    end
     dose = Dose.new(description: doses[index].downcase)
     dose.cocktail = coc
     dose.ingredient = ing
