@@ -14,3 +14,13 @@ $headers-font: "Raleway", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+@font-face {
+    font-family: Colortube;
+    src: url("fonts/ColorTube.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Abelone;
+    src: url("fonts/Abelone.otf") format("svg");
+}

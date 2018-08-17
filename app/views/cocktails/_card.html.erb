@@ -1,0 +1,13 @@
+<div class="card">
+  <%= link_to cocktail_path(cocktail), class: "picture", style: "background-image: linear-gradient(-225deg, rgba(189,195,199,0.5) 0%, rgba(44,62,80,0.5) 50%), url(#{cocktail.picture})" do %>
+    <h4><%= cocktail.name %></h4>
+    <div class="ingredients">
+      <p>Ingredients</p>
+      <ul>
+        <% cocktail.doses.each do |dose| %>
+          <li><%= dose.description %><%= dose.ingredient.name %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

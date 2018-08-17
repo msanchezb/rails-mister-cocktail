@@ -1,0 +1,24 @@
+<h1>Cocktail: <%= @cocktail.name %></h1>
+
+<p>Ingredients & Dose</p>
+<ul>
+  <% @cocktail.doses.each do |dose|  %>
+  <li>
+    <%= dose.description %>
+    <%= dose.ingredient.name %>
+    <%= link_to "Delete", dose_path(dose.id), method: "delete" %>
+  </li>
+  <% end  %>
+</ul>
+
+<p>Instructions</p>
+<%= @cocktail.instructions %>
+
+<p>Image</p>
+<%= image_tag @cocktail.picture %>
+
+
+<%= link_to "New dose", new_cocktail_dose_path(@cocktail) %>
+
+
+

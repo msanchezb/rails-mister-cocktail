@@ -1,0 +1,15 @@
+
+.banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  h1 {
+    font-family: 'Abelone';
+    font-feature-settings: inherit;
+    color: #B98BE2;
+    font-size: calc(100vw / 8);
+    opacity: 0.8;
+  }
+}
